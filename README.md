@@ -9,3 +9,4 @@ El proyecto consiste en el diseño y desarrollo de un Sistema de Gestión de Tur
 ## Integrantes
 
 ## Diagramas y Diseños
+* [Anexo](anexo.md)
