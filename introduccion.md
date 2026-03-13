@@ -2,7 +2,7 @@
 ## Los cuatro fundamentos de POO
 ## Requisitos iniciales del sistema
 ## Casos de uso
-**Caso de Uso:** Agendar Turno
+### - Agendar Turno
 
 **Nombre del caso de uso:** Agendar Turno.
 
