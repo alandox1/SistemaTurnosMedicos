@@ -2,27 +2,30 @@
 ## Los cuatro fundamentos de POO
 ## Requisitos iniciales del sistema
 ## Casos de uso
+
+
+
 ### - Agendar Turno
 
 **Nombre del caso de uso:** Agendar Turno.
 
-**Actor(es) involucrado(s):** Secretaria.
+**Actor(es) involucrado(s):** Recepcionista.
 
-**Descripción breve:** Permite a la secretaria asignar una cita a un paciente con un profesional específico, validando que el horario esté libre y que se cumplan las reglas de negocio (duración según tipo de consulta y restricciones horarias del médico).
+**Descripción breve:** Permite a la Recepcionista asignar una cita a un paciente con un profesional específico, validando que el horario esté libre y que se cumplan las reglas de negocio (duración según tipo de consulta y restricciones horarias del médico).
 
 **Flujo principal de eventos:**
 
-* La secretaria selecciona la opción "Nuevo Turno" desde la vista de la agenda.
+* La Recepcionista selecciona la opción "Nuevo Turno" desde la vista de la agenda.
 
 * El sistema solicita los datos del paciente (búsqueda por DNI o Nombre).
 
-* La secretaria selecciona al Profesional y el Tipo de Consulta (Control o Primera Consulta).
+* La Recepcionista selecciona al Profesional y el Tipo de Consulta (Control o Primera Consulta).
 
 * El sistema muestra un calendario con los huecos disponibles, filtrando automáticamente las restricciones (ej: bloquea los jueves por la tarde y no muestra "Primeras Consultas" los viernes a última hora).
 
-* La secretaria selecciona una fecha y una hora de la lista de espacios disponibles (15 min para control, 30 min para primera consulta).
+* La Recepcionista selecciona una fecha y una hora de la lista de espacios disponibles (15 min para control, 30 min para primera consulta).
 
-* La secretaria confirma la reserva del turno.
+* La Recepcionista confirma la reserva del turno.
 
 * El sistema verifica internamente que no haya ocurrido una superposición durante el proceso (validación de concurrencia).
 
@@ -30,7 +33,7 @@
 
 **Precondiciones:**
 
-* La secretaria debe estar autenticada en el sistema.
+* La Recepcionista debe estar autenticada en el sistema.
 
 * El profesional debe estar registrado con sus horarios de atención base definidos.
 
@@ -46,11 +49,13 @@
 * Se genera de forma automática una tarea programada para el envío del recordatorio (WhatsApp/Email) el día anterior a la cita.
 
 
+
+
 ### - Registrar Llegada de Paciente
 
 **Nombre del caso de uso:** Registrar Llegada de Paciente.
 
-**Actor(es) involucrado(s):** Secretaria, Doctor
+**Actor(es) involucrado(s):** Recepcionista,Profesional
 
 **Descripción breve:** El proceso permite registrar el momento exacto en que un paciente llega físicamente al consultorio para su cita. Esto cambia el estado del turno y permite al doctor saber desde su propia pantalla quién está ya en la sala de espera.
 
@@ -58,9 +63,9 @@
 
 * El paciente se presenta en la recepción del consultorio.
 
-* La secretaria busca al paciente en la lista de turnos del día.
+* La Recepcionista busca al paciente en la lista de turnos del día.
 
-* La secretaria selecciona la opción "Marcar Presente" o "Registrar Llegada" en el turno correspondiente.
+* La Recepcionista selecciona la opción "Marcar Presente" o "Registrar Llegada" en el turno correspondiente.
 
 * El sistema captura automáticamente la hora del servidor y la registra como Hora Real de Llegada.
 
@@ -73,7 +78,7 @@
 **Precondiciones:**
 * El paciente debe tener un turno previamente agendado para el día de la fecha.
 
-* La secretaria debe tener abierta la vista de "Agenda Diaria" o "Monitor de Sala".
+* La Recepcionista debe tener abierta la vista de "Agenda Diaria" o "Monitor de Sala".
 
 **Postcondiciones:**
 
@@ -83,11 +88,14 @@
 
 * El paciente queda disponible en la "cola de atención" del profesional.
 
+
+
+
 ### - Gestionar Disponibilidad
 
 **Nombre del caso de uso:** Gestionar Disponibilidad.
 
-**Actor(es) involucrado(s):** Profesional o Secretaria.
+**Actor(es) involucrado(s):** Profesional o Recepcionista
 
 **Descripción breve:** Permite definir rangos horarios o días completos en los que el profesional no recibirá pacientes, ya sea por motivos recurrentes (clases, reuniones fijas), eventos únicos (vacaciones, feriados) o restricciones de tipo de práctica (no hacer procedimientos ciertos días).
 
@@ -118,31 +126,32 @@
 
 * Cualquier intento posterior de agendar un turno en ese horario será rechazado por el sistema con un mensaje de "Horario no disponible".
 
-* La vista de la secretaria refleja claramente el motivo del bloqueo (ej: "Clase Universidad" o "Feriado").
+* La vista de la Recepcionista refleja claramente el motivo del bloqueo (ej: "Clase Universidad" o "Feriado").
+
 
 
 ### - Reprogramar Turno
 
 **Nombre del caso de uso:** Reprogramar Turno.
 
-**Actor(es) involucrado(s):** Secretaria
+**Actor(es) involucrado(s):** Recepcionista
 
 **Descripción breve:** Permite cambiar la fecha y/o hora de un turno ya existente, liberando el espacio anterior y validando la disponibilidad del nuevo horario seleccionado, disparando una notificación automática al paciente.
 
 
 **Flujo principal de eventos:**
 
-* La secretaria busca el turno original en la agenda (por nombre de paciente o fecha).
+* La Recepcionista busca el turno original en la agenda (por nombre de paciente o fecha).
 
-* La secretaria selecciona la opción "Reprogramar".
+* La Recepcionista selecciona la opción "Reprogramar".
 
 * El sistema muestra el calendario de disponibilidad del profesional, manteniendo el tipo de consulta (Control o Primera) y su duración asociada.
 
-* La secretaria selecciona la nueva fecha y hora disponible.
+* La Recepcionista selecciona la nueva fecha y hora disponible.
 
 * El sistema solicita (opcionalmente) el motivo de la reprogramación para el registro interno.
 
-* La secretaria confirma el cambio.
+* La Recepcionista confirma el cambio.
 
 + El sistema libera el bloque horario anterior, lo marca como "Disponible" y reserva el nuevo espacio con estado "Pendiente".
 
@@ -166,7 +175,41 @@
 
 
 
-Consultar Agenda
+
+### - Consultar Agenda
+
+**Nombre del caso de uso:** Consultar Agenda.
+
+**Actor(es) involucrado(s):** Recepcionista,Profesional
+
+**Descripción breve:** Permite visualizar de forma organizada y clara los turnos programados, los sobreturnos y los espacios bloqueados de un profesional en un período determinado (día o semana), reflejando el estado en tiempo real de cada cita.
+
+**Flujo principal de eventos:**
+
+* El usuario accede a la sección "Agenda" del menú principal.
+
+* El sistema muestra por defecto la vista Diaria del día actual para el profesional seleccionado.
+
+* El usuario selecciona entre la vista "Día", "Semana" o "Mes" según su necesidad.
+
+* El sistema recupera y presenta cronológicamente todos los eventos del período:Turnos (con nombre de paciente y tipo de consulta),Bloqueos (clases, feriados, reuniones).,Sobreturnos autorizados.
+
+* El sistema aplica un código de colores o iconos para identificar el Estado del Turno (Pendiente, Presente en sala, Cancelado o Atendido).
+
+* El usuario utiliza el selector de fecha (mini calendario) para navegar hacia adelante o atrás en el tiempo,al posicionar el cursor sobre un turno, el sistema despliega una "vista rápida" con datos de contacto del paciente y observaciones, sin necesidad de cambiar de pantalla.
+
+**Precondiciones:**
+
+* El usuario debe estar autenticado en el sistema.
+
+* Deben existir turnos, sobreturnos o bloqueos cargados en la base de datos para el profesional seleccionado.
+
+
+**Postcondiciones:**
+
+* El usuario visualiza la disponibilidad y ocupación real.
+
+* El Profesional identifica rápidamente quiénes ya están físicamente en el consultorio (gracias al estado "Presente" derivado del Check-in).
 
 
 ## Boceto inicial de diseño de clases
