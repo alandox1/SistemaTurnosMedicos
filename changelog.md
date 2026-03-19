@@ -8,9 +8,8 @@ Este archivo se actualiza con cada Pull Request para registrar avances y correcc
 ## [Unreleased]
 
 ### Added
-- [feature/Modelador-de-Casos-de-Uso] Creacion de los casos de uso mas sus actores
-
-  PR: [#1](link) - @usuario1 (Coordinador / DevOps)
+- [feature/modelador-de-Casos-de-Uso] Creacion de casos de uso y desarrollo  
+  PR: [#1](link) - @alandox1 (Modelador de Casos de Uso)
 
 ### Changed
 
