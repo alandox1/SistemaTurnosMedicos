@@ -7,7 +7,8 @@ Este archivo se actualiza con cada Pull Request para registrar avances y correcc
 ## [Unreleased]
 
 ### Added
-- [feature/diseñador-de-Clases] Creacion de boceto inicial de clases
+- [feature/diseniador-de-Clases] Creacion de boceto inicial de clases
+
   PR: [#8](link) - @alandox1 (Diseñador de Clases)
 
 ### Changed
