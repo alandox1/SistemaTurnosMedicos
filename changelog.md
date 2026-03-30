@@ -22,13 +22,6 @@ Este archivo se actualiza con cada Pull Request para registrar avances y correcc
 
 ### Fixed
 
-
-
-
-### Changed
-
-### Fixed
-
 ---
 
 ## [Release Actividad Obligatoria N°1] - 2026-08-10
