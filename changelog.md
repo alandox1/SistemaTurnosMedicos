@@ -21,6 +21,10 @@ Este archivo se actualiza con cada Pull Request para registrar avances y correcc
 
   PR: [#23](https://github.com/alandox1/SistemaTurnosMedicos/pull/25) - @alandox1 (Diseñador de Clases)
 
+  - [feature/diseniador-de-Clases] Correccion de error al eliminar la carpeta anexos
+
+  PR: [#28](https://github.com/alandox1/SistemaTurnosMedicos/pull/28) - @alandox1 (Diseñador de Clases)
+
 
 ### Fixed
 
