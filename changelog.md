@@ -42,7 +42,7 @@ Este archivo se actualiza con cada Pull Request para registrar avances y correcc
 - Se reemplazaron commits realizados con "Add files via upload" y "Update README.md" por commits realizados desde ramas locales siguiendo el flujo de trabajo requerido.
 - Se aplicaron las correcciones en una rama `fix/` creada desde `release/actividad-obligatoria-1`.
 - Se creó PR desde la rama de fix hacia `release/actividad-obligatoria-1`.
-- PR: [#46](https://github.com/lautarochavez14/SistemaTurnosMedicos/pull/46#issue-4266148609)
+- PR: [#47](https://github.com/lautarochavez14/SistemaTurnosMedicos/pull/47)
 ---
 
 ## [Release Actividad Obligatoria N°1] - 2026-08-10
