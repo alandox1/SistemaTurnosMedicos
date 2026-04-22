@@ -43,7 +43,6 @@ Este archivo se actualiza con cada Pull Request para registrar avances y correcc
 - PR: [#48](https://github.com/lautarochavez14/SistemaTurnosMedicos/pull/48) - @lautarochavez14 (documentador y coordinador)
 
 - PR: [#49](https://github.com/lautarochavez14/SistemaTurnosMedicos/pull/49) - @britezacostaalexis-pixel (especialista en escenarios de casos de uso)
----
 
 - [fix/uso-git-local-readme] Corrección de README.md.
 
@@ -53,6 +52,8 @@ Este archivo se actualiza con cada Pull Request para registrar avances y correcc
 - [fix/uso-git-local-archivos] Subidos archivos correctamente vía Git local en lugar de drag & drop
 
   PR: [#60](https://github.com/lautarochavez14/SistemaTurnosMedicos/pull/60) - @britezacostaalexis-pixel (Especialista en Escenarios de Casos de Uso)
+
+---
 
 ## [Release Actividad Obligatoria N°1] - 2026-04-14
 
