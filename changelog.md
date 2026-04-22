@@ -53,6 +53,10 @@ Este archivo se actualiza con cada Pull Request para registrar avances y correcc
 
   PR: [#60](https://github.com/lautarochavez14/SistemaTurnosMedicos/pull/60) - @britezacostaalexis-pixel (Especialista en Escenarios de Casos de Uso)
 
+- [fix/uso-git-local-readme] correcciones
+ [#62](https://github.com/lautarochavez14/SistemaTurnosMedicos/pull/62)
+
+
 ---
 
 ## [Release Actividad Obligatoria N°1] - 2026-04-14
