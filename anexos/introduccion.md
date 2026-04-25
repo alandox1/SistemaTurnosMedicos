@@ -51,6 +51,8 @@ Ejemplo: El procedimiento notificar() se comporta diferente si lo invoca un "Pac
 
 **RF6 - Auditoría y Registro:** El sistema debe mantener un historial de cambios de turno para resolver disputas sobre quién realizó modificaciones y modelar conceptualmente una lista de espera para cubrir lugares que se liberen.
 
+----
+
 **Requisitos No Funcionales:**
 
 **RNF1 - Usabilidad:** El sistema debe tener una interfaz simple y fácil de usar, especialmente para el médico, evitando procesos de aprendizaje complejos.
